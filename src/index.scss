@@ -99,6 +99,7 @@ header {
       margin-right: 30px;
       display: flex;
       align-items: center;
+      cursor: pointer;
       svg {
         margin-right: 10px;
       }
@@ -138,67 +139,11 @@ header {
   }
   .sneakers {
     display: flex;
-    //margin: 0 60px;
+    flex-wrap: wrap;
     column-gap: 40px;
+    row-gap: 30px;
   }
-  .card {
-    width: 210px;
-    height: 260px;
-    padding: 0px 30px 30px;
-    background: #FFFFFF;
-    border: 1px solid #F3F3F3;
-    border-radius: 40px;
-    transition: .1s;
-    &:hover {
-      box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
-      transform: translateY(-5px);
 
-    }
-    .favourite {
-      position: absolute;
-      cursor: pointer;
-    }
-    p {
-      font-size: 14px;
-      line-height: 17px;
-      margin: 10px 0 14px 0;
-    }
-
-    .cardBottom {
-      display: flex;
-      justify-content: space-between;
-
-      .cardPrice {
-        display: flex;
-        flex-direction: column;
-
-        span:nth-child(1) {
-          font-weight: 500;
-          font-size: 11px;
-          line-height: 13px;
-          text-transform: uppercase;
-          color: #BDBDBD;
-        }
-
-        span:nth-child(2) {
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 17px;
-        }
-      }
-
-      .cardButton {
-        width: 32px;
-        height: 32px;
-        background: #FFFFFF;
-        border: 1px solid #F2F2F2;
-        border-radius: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  }
 }
 .overlay  {
   position: absolute;
@@ -260,14 +205,6 @@ header {
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
-      }
-    }
-    .remobeBtn {
-      opacity: .5;
-      transition: .2s ease-in-out;
-      cursor: pointer;
-      &:hover {
-        opacity: 1;
       }
     }
   }
