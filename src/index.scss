@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: 'Inter', sans-serif;
+  overflow: scroll;
 }
 
 .wrapper {
@@ -81,6 +82,7 @@ header {
       font-weight: 700;
       font-size: 20px;
       text-transform: uppercase;
+      color: #000;
     }
     p {
       font-size: 14px;
@@ -95,6 +97,9 @@ header {
   .headerRight {
     display: flex;
     align-items: center;
+    .favoriteIcon {
+      margin-right: 30px;
+    }
     .listItem1 {
       margin-right: 30px;
       display: flex;
@@ -208,7 +213,7 @@ header {
       }
     }
   }
-  .cardTotalBlock {
+  .cartTotalBlock {
     ul {
       margin-bottom: 25px;
       .list-item {
@@ -267,5 +272,40 @@ header {
   }
   &:active {
     background: darken(#9DD558, 5%);
+  }
+}
+
+.cartEmpty {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    margin-bottom: 20px;
+  }
+  p {
+    width: 280px;
+    line-height: 24px;
+    opacity: .6;
+  }
+  .greenButton {
+    width: 245px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      img {
+        transform: rotate(180deg) translateX(3px);
+      }
+    }
+    img {
+      position: relative;
+      top: 10px;
+      transform: rotate(180deg);
+      margin-right: 15px;
+      transition: .2s;
+    }
   }
 }
